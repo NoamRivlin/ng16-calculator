@@ -1,0 +1,59 @@
+:host {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+#container {
+  max-width: 400px;
+  width: 100%;
+  gap: 10px;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pad {
+  display: grid;
+  grid-template-columns: auto auto; /* Create two columns */
+  gap: 10px;
+
+  .clears {
+    grid-column: span 2; /* Make clears span both columns */
+    display: flex;
+    gap: 10px;
+  }
+
+  .digits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  .operators {
+    display: grid;
+    width: 15px;
+    grid-template-rows: repeat(
+      4,
+      1fr
+    ); /* Adjust number of rows as needed for operators */
+    gap: 5px;
+  }
+}
